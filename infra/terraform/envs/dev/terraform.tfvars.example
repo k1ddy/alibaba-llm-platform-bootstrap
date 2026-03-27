@@ -1,0 +1,19 @@
+project_name = "alibaba-llm-platform"
+environment  = "dev"
+
+# Replace with the target Alibaba region for the demo environment.
+alicloud_region = "cn-hangzhou"
+
+vpc_cidr = "10.40.0.0/16"
+private_vswitch_cidrs = [
+  "10.40.1.0/24",
+  "10.40.2.0/24",
+]
+
+# Replace with a version supported by the selected region.
+kubernetes_version = "replace-with-supported-version"
+
+tags = {
+  owner   = "career-prep"
+  purpose = "platform-bootstrap"
+}

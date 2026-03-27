@@ -1,0 +1,8 @@
+# Example remote state backend settings.
+# Final values depend on the chosen state backend and Alibaba account layout.
+# Keep secrets out of this file.
+
+bucket = "replace-me"
+prefix = "career-prep/bootstrap/dev"
+key    = "terraform.tfstate"
+region = "cn-hangzhou"
