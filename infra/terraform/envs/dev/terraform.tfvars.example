@@ -11,8 +11,9 @@ private_vswitch_cidrs = [
   "10.40.2.0/24",
 ]
 
-# Replace with a version supported by the selected region.
-kubernetes_version = "replace-with-supported-version"
+# Validated as creatable in `cn-hangzhou` on 2026-03-27.
+# Re-check ACK metadata before any live cluster creation.
+kubernetes_version = "1.34.3-aliyun.1"
 
 # Keep disabled until a separate cost review approves cluster creation.
 ack_enabled = false
