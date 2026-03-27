@@ -1,8 +1,11 @@
 output "cluster_id" {
-  value = null
+  value = try(alicloud_cs_managed_kubernetes.this[0].id, null)
 }
 
 output "cluster_name" {
-  value = "${var.project_name}-${var.environment}-ack"
+  value = local.cluster_name
 }
 
+output "cluster_spec" {
+  value = var.cluster_spec
+}

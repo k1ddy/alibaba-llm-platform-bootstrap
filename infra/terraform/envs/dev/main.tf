@@ -48,12 +48,19 @@ module "polardb" {
 module "ack" {
   source = "../../modules/ack"
 
-  project_name       = var.project_name
-  environment        = var.environment
-  kubernetes_version = var.kubernetes_version
-  vpc_id             = module.network.vpc_id
-  worker_vswitch_ids = module.network.private_vswitch_ids
-  tags               = local.common_tags
+  project_name         = var.project_name
+  environment          = var.environment
+  enabled              = var.ack_enabled
+  cluster_spec         = var.ack_cluster_spec
+  kubernetes_version   = var.kubernetes_version
+  vswitch_ids          = module.network.private_vswitch_ids
+  service_cidr         = var.ack_service_cidr
+  pod_cidr             = var.ack_pod_cidr
+  new_nat_gateway      = var.ack_new_nat_gateway
+  slb_internet_enabled = var.ack_slb_internet_enabled
+  deletion_protection  = var.ack_deletion_protection
+  addons               = var.ack_addons
+  tags                 = local.common_tags
 }
 
 module "observability" {

@@ -10,6 +10,10 @@ output "ack_cluster_id" {
   value = module.ack.cluster_id
 }
 
+output "ack_cluster_name" {
+  value = module.ack.cluster_name
+}
+
 output "oss_bucket_name" {
   value = module.oss.bucket_name
 }

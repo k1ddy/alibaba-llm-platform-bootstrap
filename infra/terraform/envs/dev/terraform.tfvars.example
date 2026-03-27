@@ -14,6 +14,9 @@ private_vswitch_cidrs = [
 # Replace with a version supported by the selected region.
 kubernetes_version = "replace-with-supported-version"
 
+# Keep disabled until a separate cost review approves cluster creation.
+ack_enabled = false
+
 tags = {
   owner   = "career-prep"
   purpose = "platform-bootstrap"
