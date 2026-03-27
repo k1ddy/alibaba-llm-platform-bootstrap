@@ -13,6 +13,11 @@ variable "alicloud_region" {
   description = "Alibaba Cloud region for this environment."
 }
 
+variable "alicloud_account_id" {
+  type        = string
+  description = "Alibaba Cloud account ID used for globally unique resource names."
+}
+
 variable "vpc_cidr" {
   type        = string
   description = "CIDR block for the platform VPC."

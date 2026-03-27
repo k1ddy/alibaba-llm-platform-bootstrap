@@ -2,6 +2,10 @@ output "vpc_id" {
   value = module.network.vpc_id
 }
 
+output "private_vswitch_ids" {
+  value = module.network.private_vswitch_ids
+}
+
 output "ack_cluster_id" {
   value = module.ack.cluster_id
 }

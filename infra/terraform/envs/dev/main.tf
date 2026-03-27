@@ -21,6 +21,7 @@ module "oss" {
 
   project_name = var.project_name
   environment  = var.environment
+  account_id   = var.alicloud_account_id
   tags         = local.common_tags
 }
 
@@ -47,12 +48,12 @@ module "polardb" {
 module "ack" {
   source = "../../modules/ack"
 
-  project_name        = var.project_name
-  environment         = var.environment
-  kubernetes_version  = var.kubernetes_version
-  vpc_id              = module.network.vpc_id
-  worker_vswitch_ids  = module.network.private_vswitch_ids
-  tags                = local.common_tags
+  project_name       = var.project_name
+  environment        = var.environment
+  kubernetes_version = var.kubernetes_version
+  vpc_id             = module.network.vpc_id
+  worker_vswitch_ids = module.network.private_vswitch_ids
+  tags               = local.common_tags
 }
 
 module "observability" {

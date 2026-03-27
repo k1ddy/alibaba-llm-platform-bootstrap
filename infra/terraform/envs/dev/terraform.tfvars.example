@@ -3,6 +3,7 @@ environment  = "dev"
 
 # Replace with the target Alibaba region for the demo environment.
 alicloud_region = "cn-hangzhou"
+alicloud_account_id = "5864273999854348"
 
 vpc_cidr = "10.40.0.0/16"
 private_vswitch_cidrs = [

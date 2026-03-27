@@ -1,4 +1,7 @@
 output "bucket_name" {
-  value = "${var.project_name}-${var.environment}-artifacts"
+  value = alicloud_oss_bucket.this.bucket
 }
 
+output "bucket_id" {
+  value = alicloud_oss_bucket.this.id
+}

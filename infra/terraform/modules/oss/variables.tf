@@ -14,4 +14,20 @@ variable "tags" {
   default     = {}
 }
 
+variable "account_id" {
+  type        = string
+  description = "Alibaba Cloud account ID used to keep bucket names globally unique."
+}
+
+variable "bucket_acl" {
+  type        = string
+  description = "ACL for the platform artifact bucket."
+  default     = "private"
+}
+
+variable "bucket_name_override" {
+  type        = string
+  description = "Optional fixed bucket name override."
+  default     = null
+}
 
