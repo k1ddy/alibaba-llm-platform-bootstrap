@@ -1,29 +1,24 @@
 # Alibaba LLM Platform Bootstrap
 
-Foundation repository for cloud infrastructure, shared platform bootstrapping, and the first control surfaces needed to run the platform.
+Репозиторий foundation-уровня для облачной инфраструктуры, базового platform bootstrap и общих управляющих поверхностей.
 
-## Scope
-This repo owns:
-- Terraform-based cloud infrastructure.
-- Shared bootstrap assets for the platform foundation.
-- Minimal operator automation.
-- Platform-level architecture decisions.
+## Что Этот Репозиторий Делает
+- хранит Terraform-инфраструктуру;
+- хранит foundation-активы платформы;
+- хранит минимальную операторскую автоматизацию;
+- фиксирует архитектурные решения platform-уровня.
 
-## Out of Scope
-This repo does not own:
-- Application business logic.
-- Runtime code for the assistant.
-- Per-environment desired deployment state.
-- Eval datasets or demo application content.
+## Что Этот Репозиторий Не Делает
+- не содержит бизнес-логику приложений;
+- не содержит runtime-код ассистента;
+- не хранит desired deployment state окружений;
+- не хранит eval datasets или demo-content.
 
-## Initial Structure
-- `docs/adr/` - architecture decisions.
-- `infra/terraform/` - modules and environment roots.
-- `ops/ansible/` - focused operator automation.
-- `bootstrap/root-app/` - root-level GitOps bootstrap assets when we are ready.
+## Базовая Структура
+- `docs/adr/` — архитектурные решения.
+- `infra/terraform/` — модули и env roots.
+- `ops/ansible/` — точечная операторская автоматизация.
+- `bootstrap/root-app/` — root-level GitOps bootstrap assets, когда будем готовы.
 
-## First Deliverables
-- lock repo boundaries;
-- define Terraform as the primary IaC path;
-- keep cloud IaC separate from GitOps desired state;
-- build only one bounded online path first.
+## Текущая Роль В Платформе
+Этот repo отвечает за foundation, а не за runtime и не за GitOps state.
